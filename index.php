@@ -30,6 +30,8 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     var_dump($txt);
     echo "</pre>";
 
+    $wordToBeFiltered = $_GET["word"];
     var_dump(strlen($txt));
     // str_replace(porzioneDaModificare, conCosa, stringa);
+    var_dump(str_replace($wordToBeFiltered, "***", $txt));
 ?>
