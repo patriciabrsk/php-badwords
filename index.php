@@ -26,5 +26,10 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
     quasi aliquam eligendi, placeat qui corporis!";
 
-    echo $txt;
+    echo "<pre>";
+    var_dump($txt);
+    echo "</pre>";
+
+    var_dump(strlen($txt));
+    // str_replace(porzioneDaModificare, conCosa, stringa);
 ?>
