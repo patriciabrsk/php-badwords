@@ -26,11 +26,41 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
     quasi aliquam eligendi, placeat qui corporis!";
 
-    echo "<pre>";
-    var_dump($txt);
-    echo "</pre>";
+    // echo "<pre>";
+    // var_dump($txt);
+    // echo "</pre>";
 
     $wordToBeFiltered = $_GET["word"];
-    var_dump(strlen($txt));
-    var_dump(str_replace($wordToBeFiltered, "***", $txt));
+    // var_dump(strlen($txt));
+    // var_dump(str_replace($wordToBeFiltered, "***", $txt));
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Bad Words</title>
+
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Text</h2>
+            <p>
+                <?php echo $txt ?>
+            </p>
+
+            <h4>Text length is </h4>
+            <span><?php echo strlen($txt) ?></span>
+
+            <h2>Censored text</h2>
+            <p>
+                <?php echo str_replace($wordToBeFiltered, "***", $txt) ?>
+            </p>
+        </div>
+    </main>
+</body>
+</html>
